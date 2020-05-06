@@ -19,9 +19,9 @@ async def on_message(message):
                     ## WSTAW TUTAJ PĘTLĘ CZY USER
                     ## POWINIEN JUŻ LVL'UPOWAĆ
                     ## POWINNA ONA ZMIENIAĆ ZAWARTOŚĆ POLA user['level']
-                    for level in LEVELS:
-                        if user['xp'] > level:
-                            user['level'] = user['level']+1
+                    for x in range(len(LEVELS)):
+                        if user['xp'] > LEVELS[x]:
+                            user['level'] = x + 1
                     if level_before != user['level']:
                         await message.channel.send(
                             f"Congratulations {message.author.mention}, you have just hit level {user['level']}!"
