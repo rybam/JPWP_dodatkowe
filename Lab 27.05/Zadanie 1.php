@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $password1=$_POST["password1"];
     $password2=$_POST["password2"];
     //TODO
-    $name_regexp="/^[a-żA-Ż\ ]{3,}$/";
+    $name_regexp="/^[a-żA-Ż]+[a-żA-Ż\ ]{3,}$/";
     $name_check = preg_match($name_regexp, $name);
     //TODO
     $surname_regexp="/^[a-żA-Ż\-]+$/";
