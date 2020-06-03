@@ -26,5 +26,3 @@ def get_access_token():
 
     print(token)
     return token["access_token"]
-
-get_access_token()
